@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found — ByteSpace</title>
+  <meta name="description" content="The page you are looking for doesn't exist. Go back to the ByteSpace homepage to start again.">
+  <meta name="theme-color" content="#003be2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/satoshi-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/404.css">
+  <script src="js/components.js"></script>
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NOT FOUND BANNER ============ -->
+  <div class="banner not-found" data-parallax>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <site-header></site-header>
+
+    <main class="not-found__content" id="main">
+      <!-- giant "404": glyph outlines exported from the design (lime with a fade-to-blue mask) -->
+      <div class="not-found__code">
+        <svg class="not-found__digits" viewBox="0 0 887 345" width="887" height="345" role="img" aria-labelledby="code-title">
+          <title id="code-title">Error 404</title>
+          <defs>
+            <linearGradient id="code-fade" gradientUnits="userSpaceOnUse" x1="0" y1="-63" x2="0" y2="417">
+              <stop offset="0" stop-color="#d4fb20"/>
+              <stop offset=".25" stop-color="#d4fb20" stop-opacity=".96"/>
+              <stop offset=".505" stop-color="#d4fb20" stop-opacity=".81"/>
+              <stop offset=".68" stop-color="#d4fb20" stop-opacity=".61"/>
+              <stop offset="1" stop-color="#d4fb20" stop-opacity="0"/>
+            </linearGradient>
+            <path id="code-glyphs" d="M0.75 276.84L0.75 220.68L162.99 2.28L235.47 2.28L235.47 218.28L279.63 218.28L279.63 276.84L235.47 276.84L235.47 345L167.31 345L167.31 276.84L0.75 276.84ZM172.59 81.48L69.87 218.28L172.59 218.28L172.59 81.48ZM442.52 345C356.12 345 312.92 287.56 312.92 172.68C312.92 58.12 356.12 0.84 442.52 0.84C488.28 0.84 521.24 16.2 541.4 46.92C561.56 77.64 571.64 119.56 571.64 172.68C571.64 226.12 561.56 268.2 541.4 298.92C521.24 329.64 488.28 345 442.52 345ZM491.96 253.32C500.6 234.44 504.92 207.56 504.92 172.68C504.92 138.12 500.6 111.56 491.96 93C483.64 74.12 467.16 64.68 442.52 64.68C417.56 64.68 400.76 74.12 392.12 93C383.8 111.56 379.64 138.12 379.64 172.68C379.64 207.56 383.8 234.44 392.12 253.32C400.76 271.88 417.56 281.16 442.52 281.16C467.16 281.16 483.64 271.88 491.96 253.32ZM607.56 276.84L607.56 220.68L769.8 2.28L842.28 2.28L842.28 218.28L886.44 218.28L886.44 276.84L842.28 276.84L842.28 345L774.12 345L774.12 276.84L607.56 276.84ZM779.4 81.48L676.68 218.28L779.4 218.28L779.4 81.48Z"/>
+          </defs>
+          <use class="not-found__fill" href="#code-glyphs" fill="url(#code-fade)"/>
+          <!-- outline that draws itself on load, then fades away (decorative) -->
+          <use class="not-found__stroke" href="#code-glyphs"/>
+        </svg>
+      </div>
+
+      <h1 class="not-found__title">The page you are looking for doesn’t exist</h1>
+      <p class="not-found__lead anim-up" style="--d:.15s">Try to use a correct url or go back to homepage to start again</p>
+      <a class="btn btn--lime not-found__btn anim-up" style="--d:.25s" href="index.html">Back to Home</a>
+    </main>
+  </div>
+
+  <site-footer></site-footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

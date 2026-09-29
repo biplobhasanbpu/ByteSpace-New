@@ -1,0 +1,96 @@
+/* =========================================================
+   404 page (404.html) — 404 Not Found.pdf
+   ========================================================= */
+
+/* =========================================================
+   NOT FOUND BANNER
+   ========================================================= */
+.not-found__content {
+  --w: 887px;                          /* width of the giant "404" */
+  position: relative;
+  padding: 223px var(--gutter) 125px;
+  text-align: center;
+}
+
+/* giant "404" (887 x 345 on the artboard, x=278 y=223) */
+.not-found__code {
+  position: relative;
+  width: var(--w);
+  max-width: 100%;
+  margin-inline: auto;
+  left: 1.5px;                         /* the artwork sits 1.5px right of centre */
+  animation: code-in 1.2s var(--ease-spring) both;
+}
+.not-found__digits {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  animation: code-float 7s 1.2s ease-in-out infinite;
+}
+.not-found__stroke {
+  fill: none;
+  stroke: var(--lime);
+  stroke-width: 2px;
+  stroke-dasharray: 4644;                /* total outline length of the glyphs (user units) */
+  stroke-dashoffset: 4644;
+  opacity: 0;
+  animation: code-draw 2.6s .1s ease-in-out both;
+}
+
+@keyframes code-in {
+  from { translate: 0 28px; scale: .96; }
+}
+@keyframes code-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -12px; }
+}
+/* outline traces the glyphs, then dissolves into the filled artwork */
+@keyframes code-draw {
+  0% { stroke-dashoffset: 4644; opacity: 1; }
+  65% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.not-found__title {
+  position: relative;
+  max-width: 940px;
+  margin: calc(var(--w) * -.053) auto 0;    /* overlaps the bottom of the "404" (-47px at 1440) */
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 1.2;
+  letter-spacing: -.006em;
+  word-spacing: -.05em;               /* tuned to the artboard: design word gaps are narrower */
+  color: var(--white);
+}
+.not-found__lead {
+  position: relative;
+  margin-top: 31px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e4e6e8;
+}
+.not-found__btn {
+  position: relative;
+  width: 163px;
+  margin-top: 32px;
+  padding: 0;
+}
+
+/* white 3px gap between the banner and the footer rule (artboard y=957…960) */
+.not-found + site-footer { margin-top: 3px; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1100px) {
+  .not-found__content { --w: min(620px, 100vw - var(--gutter) * 2); padding-top: 190px; padding-bottom: 110px; }
+  .not-found__title { font-size: 56px; max-width: 700px; }
+}
+
+@media (max-width: 767px) {
+  .not-found__content { padding-top: 132px; padding-bottom: 80px; }
+  .not-found__title { font-size: 34px; max-width: 420px; }
+  .not-found__lead { max-width: 420px; margin: 20px auto 0; font-size: 16px; }
+  .not-found__btn { margin-top: 28px; }
+}
