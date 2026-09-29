@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "node tools/serve.mjs 4173",
     "screenshots": "node tools/screenshot.mjs",
-    "lighthouse": "node tools/lighthouse.mjs"
+    "lighthouse": "node tools/lighthouse.mjs",
+    "qa": "node tools/qa.mjs"
   },
   "devDependencies": {
     "lighthouse": "^13.5.0",

@@ -48,7 +48,20 @@ npm install                  # installs Lighthouse + puppeteer-core (dev only)
 npm run serve                # http://localhost:4173 with brotli/gzip like a real static host
 npm run lighthouse           # mobile + desktop Lighthouse for every page → reports/
 npm run screenshots          # full-page captures → screenshots/
+npm run qa                   # overflow at 7 breakpoints, console errors, broken images, dead links
 ```
+
+Current results: every page scores **100 / 100 / 100 / 100** (Performance, Accessibility,
+Best Practices, SEO) on both mobile and desktop, and matches its PDF within 1px at 1440px
+with identical page heights.
+
+## Notes
+
+- Forms (search, newsletter, sign in / sign up, filters, pagination) are handled entirely on
+  the client — there is no backend.
+- When opening files directly (`file://`) browsers ignore the font `preload` hints (CORS),
+  but the fonts still load through CSS. Serve the folder over HTTP for production.
+- If your host serves `404.html` for nested URLs, add `<base href="/">` to it (paths are relative).
 
 ## Fonts
 
