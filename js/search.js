@@ -2,9 +2,15 @@
  * - dropdown menus (search scope, filter, level, category, sort): open/close,
  *   keyboard navigation, single-choice items (menuitemradio)
  * - client-side pagination (no backend): active page, prev/next state
+ * - prefills the search field from ?q= (e.g. submitted from the home page)
  */
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- query from the home page search (search.html?q=…) ---------- */
+  const query = new URLSearchParams(location.search).get('q');
+  const queryInput = document.querySelector('.finder input[name="q"]');
+  if (query && queryInput) queryInput.value = query;
 
   /* ---------- dropdown menus ---------- */
   const dropdowns = [...document.querySelectorAll('[data-dropdown]')];
