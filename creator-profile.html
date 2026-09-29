@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PurePearl Studio — Creator Profile — ByteSpace</title>
+  <meta name="description" content="PurePearl Studio is a passionate UI/UX and web designer on ByteSpace. Browse their courses, follow the studio and learn together.">
+  <meta name="theme-color" content="#003be2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/satoshi-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <script src="js/components.js"></script>
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ CREATOR BANNER ============ -->
+  <div class="banner profile-hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <site-header active="creators"></site-header>
+
+    <section class="container profile" aria-labelledby="profile-name">
+      <div class="profile__intro">
+        <img class="profile__avatar anim-pop" src="assets/img/profile/purepearl-avatar.webp" alt="Portrait of the PurePearl Studio creator" width="192" height="192" fetchpriority="high">
+        <div class="profile__id">
+          <div class="profile__title">
+            <h1 class="profile__name" id="profile-name">PurePearl Studio</h1>
+            <span class="profile__badge anim-up" style="--d:.15s">Creator</span>
+          </div>
+          <p class="profile__role anim-up" style="--d:.1s">Passionate UI/UX, Web designer</p>
+        </div>
+      </div>
+
+      <div class="profile__bio">
+        <p>Welcome to the creative world of [Creator's Name]. Here, you'll discover the passion, expertise, and inspiration that drive my creative journey. Let's explore and learn together!</p>
+        <p>ive into my creative portfolio, showcasing a glimpse of my artistic endeavors. From digital designs to multimedia projects, each piece tells a unique story. Explore the world of creativity with me.</p>
+      </div>
+
+      <div class="profile__bar">
+        <ul class="profile__stats">
+          <li class="stat-chip anim-up" style="--d:.2s"><b>3</b> Products</li>
+          <li class="stat-chip anim-up" style="--d:.28s"><b data-followers>12</b> Followers</li>
+        </ul>
+        <button class="btn btn--lime follow-btn anim-up" style="--d:.34s" type="button" aria-pressed="false" data-follow>
+          <span class="follow-btn__label">Follow</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <main id="main">
+    <!-- ============ COURSES ============ -->
+    <section class="courses" aria-labelledby="courses-title">
+      <div class="container">
+        <h2 class="sr-only" id="courses-title">Courses by PurePearl Studio</h2>
+
+        <!-- toolbar: filters + sort (client-side only) -->
+        <div class="toolbar" role="group" aria-label="Filter and sort courses">
+          <div class="toolbar__group">
+            <div class="dropdown" data-dropdown="rating">
+              <button class="tool-btn tool-btn--filter" type="button" aria-expanded="false" aria-controls="menu-filter">
+                <svg class="tool-btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 18 20" width="18" height="20"><path fill="currentColor" d="M4.01 4L14.01 4L8.99 10.3L4.01 4M1.26 3.61C3.27 6.2 7.01 11 7.01 11L7.01 17C7.01 17.55 7.46 18 8.01 18L10.01 18C10.55 18 11.01 17.55 11.01 17L11.01 11C11.01 11 14.73 6.2 16.74 3.61C17.26 2.95 16.79 2 15.96 2L2.04 2C1.21 2 0.74 2.95 1.26 3.61"/></svg>
+                <span class="tool-btn__label">Filter</span>
+              </button>
+              <div class="dropdown__menu" id="menu-filter" role="group" aria-label="Minimum rating" hidden>
+                <button class="dropdown__option" type="button" aria-pressed="true" data-value="0">Any rating</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="4.5">4.5 &amp; up</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="4">4.0 &amp; up</button>
+              </div>
+            </div>
+
+            <div class="dropdown" data-dropdown="level">
+              <button class="tool-btn tool-btn--level" type="button" aria-expanded="false" aria-controls="menu-level">
+                <svg class="tool-btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 18 20" width="18" height="20"><path fill="currentColor" d="M13.5 2L16.5 2L16.5 18L13.5 18L13.5 2M1.5 12L4.5 12L4.5 18L1.5 18L1.5 12M7.5 7L10.5 7L10.5 18L7.5 18L7.5 7"/></svg>
+                <span class="tool-btn__label">Level</span>
+              </button>
+              <div class="dropdown__menu" id="menu-level" role="group" aria-label="Level" hidden>
+                <button class="dropdown__option" type="button" aria-pressed="true" data-value="">All levels</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="beginner">Beginner</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="intermediate">Intermediate</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="advanced">Advanced</button>
+              </div>
+            </div>
+
+            <div class="dropdown" data-dropdown="category">
+              <button class="tool-btn tool-btn--category" type="button" aria-expanded="false" aria-controls="menu-category">
+                <svg class="tool-btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" width="20" height="20"><path fill="currentColor" d="M9.5 0L4 9L15 9L9.5 0M9.5 3.84L11.43 7L7.56 7L9.5 3.84M15 11C12.51 11 10.5 13.01 10.5 15.5C10.5 17.99 12.51 20 15 20C17.49 20 19.5 17.99 19.5 15.5C19.5 13.01 17.49 11 15 11M15 18C13.62 18 12.5 16.88 12.5 15.5C12.5 14.12 13.62 13 15 13C16.38 13 17.5 14.12 17.5 15.5C17.5 16.88 16.38 18 15 18M0.5 19.5L8.5 19.5L8.5 11.5L0.5 11.5L0.5 19.5M2.5 13.5L6.5 13.5L6.5 17.5L2.5 17.5L2.5 13.5"/></svg>
+                <span class="tool-btn__label">Category</span>
+              </button>
+              <div class="dropdown__menu" id="menu-category" role="group" aria-label="Category" hidden>
+                <button class="dropdown__option" type="button" aria-pressed="true" data-value="">All categories</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="design">Design</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="development">Development</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="it">IT &amp; Software</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="business">Business</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="marketing">Marketing</button>
+                <button class="dropdown__option" type="button" aria-pressed="false" data-value="photography">Photography</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown dropdown--end" data-dropdown="sort">
+            <button class="tool-btn tool-btn--sort" type="button" aria-expanded="false" aria-controls="menu-sort">
+              <svg class="tool-btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" width="20" height="20"><path fill="currentColor" d="M1 16L7 16L7 14L1 14L1 16M1 4L1 6L19 6L19 4L1 4M1 11L13 11L13 9L1 9L1 11"/></svg>
+              <span class="sr-only">Sort by: </span><span class="tool-btn__label" data-sort-label>Most relevant</span>
+            </button>
+            <div class="dropdown__menu" id="menu-sort" role="group" aria-label="Sort courses" hidden>
+              <button class="dropdown__option" type="button" aria-pressed="true" data-value="relevant">Most relevant</button>
+              <button class="dropdown__option" type="button" aria-pressed="false" data-value="rating">Highest rated</button>
+              <button class="dropdown__option" type="button" aria-pressed="false" data-value="title">Title A–Z</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="sr-only" role="status" data-results-status></p>
+
+        <div class="course-grid profile-grid" id="course-grid">
+          <article class="course-card reveal" style="--d:0s" data-level="beginner" data-category="design" data-rating="4.5" data-order="0">
+            <div class="course-card__media">
+              <img src="assets/img/course-1.webp" alt="Designer sketching wireframes next to a laptop" width="682" height="454" loading="lazy" decoding="async">
+              <ul class="course-card__chips">
+                <li>17 Lessons</li>
+                <li>2 hours 16 mins</li>
+                <li>59 Comments</li>
+              </ul>
+            </div>
+            <div class="course-card__head">
+              <h3 class="course-card__title"><a href="course-details.html" title="Learn Figma from Basic">Learn Figma from Basic</a></h3>
+              <span class="rating" aria-label="Rated 4.5 out of 5">4.5 <img class="rating__star" src="assets/icons/star-gray.svg" alt="" width="17" height="17"></span>
+            </div>
+            <p class="course-card__author">by <a href="creator-profile.html">purepearl studio</a></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm" aria-label="26+ students enrolled">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </article>
+          <article class="course-card reveal" style="--d:.08s" data-level="beginner" data-category="design" data-rating="4.5" data-order="1">
+            <div class="course-card__media">
+              <img src="assets/img/course-2.webp" alt="Grid of embossed interface icons" width="682" height="454" loading="lazy" decoding="async">
+              <ul class="course-card__chips">
+                <li>17 Lessons</li>
+                <li>2 hours 16 mins</li>
+                <li>59 Comments</li>
+              </ul>
+            </div>
+            <div class="course-card__head">
+              <h3 class="course-card__title"><a href="course-details.html" title="Build Digital Asset">Build Digital Asset</a></h3>
+              <span class="rating" aria-label="Rated 4.5 out of 5">4.5 <img class="rating__star" src="assets/icons/star-gray.svg" alt="" width="17" height="17"></span>
+            </div>
+            <p class="course-card__author">by <a href="creator-profile.html">purepearl studio</a></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm" aria-label="26+ students enrolled">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </article>
+          <article class="course-card reveal" style="--d:.16s" data-level="beginner" data-category="it" data-rating="4.5" data-order="2">
+            <div class="course-card__media">
+              <img src="assets/img/course-3.webp" alt="Analytics dashboard with charts on a monitor" width="682" height="454" loading="lazy" decoding="async">
+              <ul class="course-card__chips">
+                <li>17 Lessons</li>
+                <li>2 hours 16 mins</li>
+                <li>59 Comments</li>
+              </ul>
+            </div>
+            <div class="course-card__head">
+              <h3 class="course-card__title"><a href="course-details.html" title="the Power of Big Data">the Power of Big Data</a></h3>
+              <span class="rating" aria-label="Rated 4.5 out of 5">4.5 <img class="rating__star" src="assets/icons/star-gray.svg" alt="" width="17" height="17"></span>
+            </div>
+            <p class="course-card__author">by <a href="creator-profile.html">purepearl studio</a></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm" aria-label="26+ students enrolled">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </article>
+          <article class="course-card reveal" style="--d:0s" data-level="beginner" data-category="business" data-rating="4.5" data-order="3">
+            <div class="course-card__media">
+              <img src="assets/img/course-4.webp" alt="Tidy desk with an iMac showing the words Do More" width="682" height="454" loading="lazy" decoding="async">
+              <ul class="course-card__chips">
+                <li>17 Lessons</li>
+                <li>2 hours 16 mins</li>
+                <li>59 Comments</li>
+              </ul>
+            </div>
+            <div class="course-card__head">
+              <h3 class="course-card__title"><a href="course-details.html" title="Balancing Productivity and Self-Care">Balancing Productivity and Self-Care</a></h3>
+              <span class="rating" aria-label="Rated 4.5 out of 5">4.5 <img class="rating__star" src="assets/icons/star-gray.svg" alt="" width="17" height="17"></span>
+            </div>
+            <p class="course-card__author">by <a href="creator-profile.html">purepearl studio</a></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm" aria-label="26+ students enrolled">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </article>
+          <article class="course-card reveal" style="--d:.08s" data-level="beginner" data-category="business" data-rating="4.5" data-order="4">
+            <div class="course-card__media">
+              <img src="assets/img/course-5.webp" alt="Close-up of a rising green line chart" width="682" height="454" loading="lazy" decoding="async">
+              <ul class="course-card__chips">
+                <li>17 Lessons</li>
+                <li>2 hours 16 mins</li>
+                <li>59 Comments</li>
+              </ul>
+            </div>
+            <div class="course-card__head">
+              <h3 class="course-card__title"><a href="course-details.html" title="Mastering Money Management">Mastering Money Management</a></h3>
+              <span class="rating" aria-label="Rated 4.5 out of 5">4.5 <img class="rating__star" src="assets/icons/star-gray.svg" alt="" width="17" height="17"></span>
+            </div>
+            <p class="course-card__author">by <a href="creator-profile.html">purepearl studio</a></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm" aria-label="26+ students enrolled">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </article>
+          <article class="course-card reveal" style="--d:.16s" data-level="beginner" data-category="business" data-rating="4.5" data-order="5">
+            <div class="course-card__media">
+              <img src="assets/img/course-6.webp" alt="Team meeting in front of a wall of sticky notes" width="682" height="454" loading="lazy" decoding="async">
+              <ul class="course-card__chips">
+                <li>17 Lessons</li>
+                <li>2 hours 16 mins</li>
+                <li>59 Comments</li>
+              </ul>
+            </div>
+            <div class="course-card__head">
+              <h3 class="course-card__title"><a href="course-details.html" title="From Idea to Startup Success">From Idea to Startup Success</a></h3>
+              <span class="rating" aria-label="Rated 4.5 out of 5">4.5 <img class="rating__star" src="assets/icons/star-gray.svg" alt="" width="17" height="17"></span>
+            </div>
+            <p class="course-card__author">by <a href="creator-profile.html">purepearl studio</a></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm" aria-label="26+ students enrolled">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </article>
+        </div>
+
+        <div class="courses__empty" data-empty hidden>
+          <p>No courses match these filters.</p>
+          <button class="btn btn--lime" type="button" data-reset>Show all courses</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/profile.js" defer></script>
+</body>
+</html>
