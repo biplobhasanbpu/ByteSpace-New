@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In — ByteSpace</title>
+  <meta name="description" content="Sign in to ByteSpace and get instant access to your courses, progress and a world of knowledge.">
+  <meta name="theme-color" content="#003be2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/satoshi-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/course-2.webp" as="image" type="image/webp" fetchpriority="high" media="(min-width: 900px)">
+  <link rel="preload" href="assets/img/course-3.webp" as="image" type="image/webp" fetchpriority="high" media="(min-width: 900px)">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/components.js"></script>
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="banner auth" data-parallax>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <site-header variant="minimal"></site-header>
+
+    <div class="container auth__layout">
+      <!-- ============ INTRO ============ -->
+      <div class="auth-intro anim-up">
+        <p class="auth-intro__title">Sign in with ease</p>
+        <p class="auth-intro__lead">Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.</p>
+      </div>
+
+      <!-- ============ SIGN IN CARD ============ -->
+      <main class="auth-card" id="main">
+        <div class="auth-card__panel" data-auth-panel>
+          <p class="auth-card__eyebrow">Sign In</p>
+          <h1 class="auth-card__title">Welcome Back</h1>
+
+          <form class="auth-form" action="#" method="post" novalidate data-auth-form>
+            <div class="field">
+              <label class="field__label" for="login-email">Email</label>
+              <div class="field__control">
+                <input class="field__input" id="login-email" name="email" type="email" placeholder="designer@example.com" autocomplete="email" inputmode="email" required aria-describedby="login-email-error">
+              </div>
+              <p class="field__error" id="login-email-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="login-password">Password</label>
+              <div class="field__control">
+                <input class="field__input field__input--password" id="login-password" name="password" type="password" placeholder="********" autocomplete="current-password" required minlength="8" aria-describedby="login-password-error">
+                <button class="field__toggle" type="button" aria-controls="login-password" aria-pressed="false" aria-label="Show password" data-password-toggle>
+                  <svg class="field__eye" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle fill="none" stroke="currentColor" stroke-width="1.6" cx="12" cy="12" r="3"/><path class="field__eye-slash" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M4 4l16 16"/></svg>
+                </button>
+              </div>
+              <p class="field__error" id="login-password-error" hidden></p>
+            </div>
+
+            <div class="auth-form__actions">
+              <button class="btn btn--lime auth-form__submit" type="submit">Sign In</button>
+            </div>
+          </form>
+
+          <!-- social sign-in -->
+          <div class="auth-divider"><span>or</span></div>
+          <ul class="social" aria-label="Sign in with a social account">
+            <li>
+              <button class="social__btn social__btn--facebook" type="button" aria-label="Sign in with Facebook" data-social="Facebook">
+                <svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><path fill="currentColor" d="M33.67 17.1C33.67 7.9 26.2 0.43 17 0.43C7.8 0.43 0.33 7.9 0.33 17.1C0.33 25.42 6.43 32.31 14.4 33.56L14.4 21.92L10.16 21.92L10.16 17.1L14.4 17.1L14.4 13.43C14.4 9.25 16.88 6.94 20.69 6.94C22.51 6.94 24.42 7.27 24.42 7.27L24.42 11.37L22.32 11.37C20.25 11.37 19.6 12.66 19.6 13.97L19.6 17.1L24.23 17.1L23.49 21.92L19.6 21.92L19.6 33.56C27.57 32.31 33.67 25.42 33.67 17.1"/></svg>
+              </button>
+            </li>
+            <li>
+              <button class="social__btn social__btn--google" type="button" aria-label="Sign in with Google" data-social="Google">
+                <svg viewBox="0 0 34 34" width="34" height="34" aria-hidden="true" focusable="false"><path fill="currentColor" d="M33.26 17.37C33.26 16.28 33.16 15.24 32.99 14.22L17.3 14.22L17.3 20.49L26.29 20.49C25.88 22.54 24.7 24.28 22.95 25.46L22.95 29.62L28.31 29.62C31.45 26.72 33.26 22.44 33.26 17.37"/><path fill="currentColor" d="M17.3 6.93C19.76 6.93 21.95 7.78 23.69 9.43L28.44 4.68C25.56 1.99 21.8 0.33 17.3 0.33C10.79 0.33 5.16 4.08 2.43 9.53L7.95 13.82C9.27 9.86 12.95 6.93 17.3 6.93"/><path fill="currentColor" fill-rule="evenodd" d="M17.3 33.67C10.79 33.67 5.16 29.92 2.43 24.47L7.95 20.18C9.27 24.14 12.95 27.07 17.3 27.07C19.55 27.07 21.45 26.46 22.95 25.46L28.31 29.62C25.56 32.17 21.8 33.67 17.3 33.67M7.95 13.82L7.95 9.53L2.43 9.53L7.95 13.82"/><path fill="currentColor" d="M2.43 20.18L7.95 20.18C7.61 19.18 7.43 18.11 7.43 17C7.43 15.89 7.62 14.82 7.95 13.82L2.43 9.53C1.29 11.78 0.63 14.31 0.63 17C0.63 19.69 1.29 22.22 2.43 24.47L2.43 20.18M7.95 20.18L2.43 20.18L2.43 24.47L7.95 20.18"/></svg>
+              </button>
+            </li>
+          </ul>
+          <p class="auth-note" role="status" data-auth-note></p>
+
+          <p class="auth-switch auth-switch--login">New user? <a href="register.html">Create an account</a></p>
+        </div>
+
+        <!-- success state (shown by js/auth.js instead of submitting) -->
+        <div class="auth-success" data-auth-success hidden>
+          <span class="auth-success__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          </span>
+          <h2 class="auth-success__title" tabindex="-1">You're signed in!</h2>
+          <p class="auth-success__text">Welcome back<span data-auth-name></span>. Pick up where you left off and keep learning.</p>
+          <a class="btn btn--lime auth-success__btn" href="search.html">Browse courses</a>
+        </div>
+      </main>
+
+      <!-- ============ COLLAGE (decorative) ============ -->
+      <div class="collage" aria-hidden="true">
+        <div class="collage__stage">
+          <!-- back course card -->
+          <div class="course-card collage__card collage__card--back">
+            <div class="course-card__media">
+              <img src="assets/img/course-2.webp" alt="" width="682" height="454" fetchpriority="high" decoding="async">
+              <ul class="course-card__chips course-card__chips--lg"><li>17 Lessons</li><li>2 hours 16 mins</li><li>59 Comments</li></ul>
+            </div>
+            <div class="course-card__head">
+              <p class="course-card__title">Build Digital Asset</p>
+              <span class="rating">4.5 <img class="rating__star" src="assets/icons/star-lime.svg" alt="" width="20" height="20"></span>
+            </div>
+            <p class="course-card__author">by <span>purepearl studio</span></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </div>
+
+          <!-- front course card -->
+          <div class="course-card collage__card collage__card--front">
+            <div class="course-card__media">
+              <img src="assets/img/course-3.webp" alt="" width="682" height="454" fetchpriority="high" decoding="async">
+              <ul class="course-card__chips course-card__chips--lg"><li>17 Lessons</li><li>2 hours 16 mins</li><li>59 Comments</li></ul>
+            </div>
+            <div class="course-card__head">
+              <p class="course-card__title">the Power of Big Data</p>
+              <span class="rating">4.5 <img class="rating__star" src="assets/icons/star-lime.svg" alt="" width="20" height="20"></span>
+            </div>
+            <p class="course-card__author">by <span>purepearl studio</span></p>
+            <div class="course-card__meta">
+              <span class="level-pill"><img class="level-pill__icon" src="assets/icons/level.svg" alt="" width="12" height="13">Beginner</span>
+              <div class="avatars avatars--sm">
+                <img src="assets/img/avatar-c158.webp" alt="" width="64" height="64" decoding="async">
+                <img src="assets/img/avatar-c276.webp" alt="" width="64" height="64" decoding="async">
+                <img src="assets/img/avatar-c272.webp" alt="" width="64" height="64" decoding="async">
+                <img src="assets/img/avatar-c268.webp" alt="" width="64" height="64" decoding="async">
+                <span class="avatars__more">26+</span>
+              </div>
+            </div>
+            <p class="price"><strong>$25</strong>/lifetime</p>
+          </div>
+
+          <!-- happy students widget -->
+          <div class="widget widget--students collage__widget">
+            <p class="widget__title">Happy Students</p>
+            <p class="widget__rating"><b>4.5</b> <span>(240)</span> <img class="widget__star" src="assets/icons/auth-star-blue.svg" alt="" width="14" height="14"></p>
+            <div class="avatars avatars--md">
+              <img src="assets/img/avatar-1.webp" alt="" width="96" height="96" decoding="async">
+              <img src="assets/img/avatar-2.webp" alt="" width="96" height="96" decoding="async">
+              <img src="assets/img/avatar-3.webp" alt="" width="96" height="96" decoding="async">
+              <img src="assets/img/avatar-4.webp" alt="" width="96" height="96" decoding="async">
+              <img src="assets/img/avatar-5.webp" alt="" width="96" height="96" decoding="async">
+              <img src="assets/img/avatar-6.webp" alt="" width="96" height="96" decoding="async">
+              <img src="assets/img/avatar-7.webp" alt="" width="96" height="96" decoding="async">
+              <span class="avatars__more">2K+</span>
+            </div>
+          </div>
+
+          <!-- 3D shapes (pointer parallax via js/main.js) -->
+          <div class="deco collage__deco">
+            <img class="shape shape--float-c" style="--x:51.1px;--y:41.3px;--w:101.7px" src="assets/img/torus-lime.webp" alt="" width="357" height="327" decoding="async">
+            <img class="shape shape--float-a" style="--x:1.4px;--y:419.7px;--w:124.7px" src="assets/img/pyramid-lime.webp" alt="" width="187" height="206" decoding="async">
+            <img class="shape shape--float-b" style="--x:381.7px;--y:351.3px;--w:114.6px" src="assets/img/spring-h-white.webp" alt="" width="172" height="183" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

@@ -163,6 +163,7 @@ site-footer { display: block; }
 }
 .site-header__logo { margin-left: 2px; color: var(--soft); }
 .logo { width: 171px; height: 35px; }
+.logo.logo--mark { width: 29px; height: 35px; }
 .site-header__logo .logo { transition: transform .5s var(--ease-spring); }
 .site-header__logo:hover .logo { transform: rotate(-3deg) scale(1.04); }
 
