@@ -198,6 +198,10 @@ site-footer { display: block; }
   transition: transform .35s var(--ease-out);
 }
 .nav-link:hover { color: var(--lime); }
+/* every artboard draws "Home" 3px above the other nav links */
+@media (min-width: 901px) {
+  .site-nav__links li:first-child .nav-link { translate: 0 -3px; }
+}
 .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
 .nav-link.is-active::after { background: currentColor; opacity: .0; }
 .nav-link.is-active:hover::after { opacity: 1; background: var(--lime); }
@@ -644,6 +648,9 @@ site-footer { display: block; }
 
 /* shared layout breakpoints (header nav, footer, type scale) */
 @media (max-width: 1279px) {
+  .course-card__chips { left: 10px; right: 10px; bottom: 12px; gap: 6px; }
+  .course-card__chips li { padding: 0 9px; font-size: 11px; }
+  .course-card__chips li:nth-child(3) { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
   .site-footer__top { grid-template-columns: 1fr auto; gap: 40px; }
   .site-footer__links { grid-template-columns: repeat(3, 180px); }
 }
@@ -722,8 +729,6 @@ site-footer { display: block; }
   .h2 br { display: none; }
   .body-copy { font-size: 16px; }
   .pill { height: 38px; font-size: 14px; padding: 0 14px; }
-  .course-card__chips { left: 10px; bottom: 12px; gap: 6px; }
-  .course-card__chips li { padding: 0 9px; font-size: 11px; }
 
   .site-footer__top { padding-top: 48px; }
   .newsletter { flex-wrap: wrap; gap: 12px; margin-top: 28px; }
