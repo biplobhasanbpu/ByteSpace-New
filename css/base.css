@@ -653,7 +653,8 @@ site-footer { display: block; }
   .course-card__chips li { padding: 0 9px; font-size: 11px; }
   .course-card__chips li:nth-child(3) { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
   .site-footer__top { grid-template-columns: 1fr auto; gap: 40px; }
-  .site-footer__links { grid-template-columns: repeat(3, 180px); }
+  .site-footer__links { grid-template-columns: repeat(3, minmax(0, 150px)); }
+  .newsletter__input { width: auto; flex: 1; min-width: 0; }
 }
 
 @media (max-width: 1023px) {
