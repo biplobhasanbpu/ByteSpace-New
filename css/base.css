@@ -223,10 +223,14 @@ site-footer { display: block; }
    ========================================================= */
 .banner, .hero {
   position: relative;
+  z-index: 2; /* keep dropdowns / the mobile menu above the content that follows */
   background: var(--blue);
-  overflow: hidden;
   isolation: isolate;
 }
+/* the home hero clips its ring + shapes; other banners must not clip their
+   dropdown menus, so only their decorative layer is clipped */
+.hero { overflow: hidden; }
+.banner > .deco { overflow: hidden; }
 /* 120px blueprint grid used on every blue section */
 .grid-bg {
   position: absolute;
