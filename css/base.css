@@ -397,7 +397,7 @@ site-footer { display: block; }
 
 .course-card {
   position: relative;
-  padding: 16px 16px 24px;
+  padding: 16px 16px 20px;
   border: 1px solid var(--line);
   border-radius: 24px;
   background: var(--white);
@@ -447,7 +447,7 @@ site-footer { display: block; }
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 21px;
 }
 .course-card__title {
   flex: 1;
@@ -495,7 +495,7 @@ site-footer { display: block; }
   padding: 0 16px;
   border-radius: 16px;
   background: var(--soft);
-  font-size: 14px;
+  font-size: 12px;
   color: var(--ink-2);
 }
 .level-pill__icon { width: 12px; height: 13px; }
@@ -554,15 +554,15 @@ site-footer { display: block; }
   grid-template-columns: 620px 1fr;
   padding-top: 70px;
 }
-.site-footer__logo { display: inline-block; color: var(--ink); }
+.site-footer__logo { display: block; width: fit-content; color: var(--ink); }
 .site-footer__logo .logo { transition: transform .5s var(--ease-spring); }
 .site-footer__logo:hover .logo { transform: rotate(-3deg) scale(1.04); }
-.site-footer__lead { margin-top: 18px; font-size: 14px; line-height: 18px; }
+.site-footer__lead { margin-top: 20px; font-size: 14px; line-height: 18px; }
 .newsletter {
   display: flex;
   align-items: flex-start;
   gap: 23px;
-  margin-top: 47px;
+  margin-top: 46px;
 }
 .newsletter__input {
   width: 378px;
@@ -582,7 +582,7 @@ site-footer { display: block; }
 .newsletter.is-done .newsletter__btn { background: var(--blue); color: var(--white); }
 .site-footer__legal {
   max-width: 480px;
-  margin-top: 22px;
+  margin-top: 23px;
   font-size: 12px;
   line-height: 19px;
 }
@@ -591,6 +591,7 @@ site-footer { display: block; }
   grid-template-columns: repeat(3, 207px);
   padding-top: 50px;
 }
+.footer-col li { font-size: 14px; line-height: 18px; }
 .footer-col li + li { margin-top: 20px; }
 .footer-col a, .site-footer__policies a {
   position: relative;
@@ -616,8 +617,8 @@ site-footer { display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 127px;
-  padding: 24px 0 48px;
+  margin-top: 129px;
+  padding: 23px 0 49px;
   border-top: 2px solid var(--line);
   font-size: 12px;
   line-height: 17px;
@@ -640,6 +641,20 @@ site-footer { display: block; }
 /* =========================================================
    RESPONSIVE (shared)
    ========================================================= */
+
+/* shared layout breakpoints (header nav, footer, type scale) */
+@media (max-width: 1279px) {
+  .site-footer__top { grid-template-columns: 1fr auto; gap: 40px; }
+  .site-footer__links { grid-template-columns: repeat(3, 180px); }
+}
+
+@media (max-width: 1023px) {
+  .site-nav__links { gap: 20px; }
+  .site-footer__top { grid-template-columns: 1fr; gap: 48px; }
+  .site-footer__links { grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 0; }
+  .site-footer__bottom { margin-top: 64px; }
+}
+
 /* mobile navigation */
 @media (max-width: 900px) {
   .site-header__inner { margin-top: 20px; height: 48px; align-items: center; }
@@ -698,6 +713,25 @@ site-footer { display: block; }
     color: var(--ink);
   }
   .nav-link--join::after { display: none; }
+}
+
+@media (max-width: 767px) {
+  :root { --gutter: 16px; }
+  .h2 { font-size: 30px; }
+  .h2--sm { font-size: 26px; }
+  .h2 br { display: none; }
+  .body-copy { font-size: 16px; }
+  .pill { height: 38px; font-size: 14px; padding: 0 14px; }
+  .course-card__chips { left: 10px; bottom: 12px; gap: 6px; }
+  .course-card__chips li { padding: 0 9px; font-size: 11px; }
+
+  .site-footer__top { padding-top: 48px; }
+  .newsletter { flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .newsletter__input { width: 100%; }
+  .newsletter__btn { width: 100%; margin-top: 0; }
+  .site-footer__links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+  .site-footer__bottom { flex-direction: column; gap: 16px; align-items: flex-start; margin-top: 48px; padding-bottom: 32px; }
+  .site-footer__policies { flex-wrap: wrap; gap: 12px 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
