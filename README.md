@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ByteSpace
 
 Marketing site and course pages for ByteSpace, built from the Figma designs (PDF exports, 1440px artboards).
@@ -67,3 +68,7 @@ with identical page heights.
 
 - Poppins 600 — SIL Open Font License (Google Fonts)
 - Satoshi — Fontshare Free Font License (`assets/fonts/FFL.txt`)
+=======
+# ByteSpace-New
+"Built 'ByteSpace New' landing page for Doin Tech assessment using React, Tailwind CSS &amp; Vite. It features a pixel-perfect, responsive UI with reusable components, clean code &amp; modern glassmorphism. Followed strict Git branching (PR to main) &amp; deployed the live project on Vercel successfully."
+>>>>>>> 17cd9488b426b8284b08e70467dc61c77c12c4ed
