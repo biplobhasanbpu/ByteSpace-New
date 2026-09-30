@@ -200,9 +200,7 @@ site-footer { display: block; }
 }
 .nav-link:hover { color: var(--lime); }
 /* every artboard draws "Home" 3px above the other nav links */
-@media (min-width: 901px) {
-  .site-nav__links li:first-child .nav-link { translate: 0 -3px; }
-}
+
 .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
 .nav-link.is-active::after { background: currentColor; opacity: .0; }
 .nav-link.is-active:hover::after { opacity: 1; background: var(--lime); }
