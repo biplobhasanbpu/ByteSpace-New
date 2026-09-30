@@ -1,0 +1,12 @@
+# dependencies (QA tooling only)
+node_modules/
+
+# QA output
+reports/
+screenshots/
+
+# OS / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
